@@ -40,6 +40,7 @@ namespace SportsStore
 
             app.UseMvc(routes =>
             {
+                routes.MapRoute("pagination", "Products/Page{productPage}", new { Controller = "Product", action = "List" });
                 routes.MapRoute("default", "{controller=Product}/{action=List}/{id?}");
             });
 
